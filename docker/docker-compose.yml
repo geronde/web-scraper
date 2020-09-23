@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  local_scraper:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ny_museums
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5432:54327"
+    networks:
+      local_net:
+        ipv4_address: 10.0.0.17
+networks:
+  local_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.17/16

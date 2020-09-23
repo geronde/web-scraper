@@ -88,6 +88,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    pg (1.2.3)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -155,6 +156,7 @@ DEPENDENCIES
   byebug
   listen (~> 3.2)
   nokogiri
+  pg
   pry
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)

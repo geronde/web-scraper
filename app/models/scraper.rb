@@ -24,15 +24,15 @@ class Scraper
   def scrape_museums_by_city(urls)
     museums = []
     urls.each do |city_url|
-    doc = define_doc("http://www.museumsusa.org#{city_url}")
-    museums_all = doc.css('.itemGroup .item')
-    museums_all.each do |m|
-      details = { state: m.css('.location').text.split(',')[1],
-                  city: m.css('.location').text.split(',')[0],
-                  name: m.css('.source').css('a').text,
-                  categories: m.css('.type').text,
-                  description: m.css('.abstract').text }
-      museums << details
+      doc = define_doc("http://www.museumsusa.org#{city_url}")
+      museums_all = doc.css('.itemGroup .item')
+      museums_all.each do |m|
+        details = { state: m.css('.location').text.split(',')[1],
+                    city: m.css('.location').text.split(',')[0],
+                    name: m.css('.source').css('a').text,
+                    categories: m.css('.type').text,
+                    description: m.css('.abstract').text }
+        museums << details
       end
     end
     museums

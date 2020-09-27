@@ -32,6 +32,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot'
   gem 'rspec-rails', '~> 4.0.1'
+  gem 'simplecov'
 end
 
 group :development do

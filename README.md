@@ -1,24 +1,24 @@
-# README
+# Scraper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo is a web scraper made in ruby on rails and Nikogiri
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+You need to install: (citing version I have used to develop this application)
 
-* System dependencies
+ - Ruby, 2.5 or above
+ - Rails, 6
+ - docker, 19
+ - docker compose, 1.26
 
-* Configuration
 
-* Database creation
+## How to get started
 
-* Database initialization
+- start the database by running ```cd docker && docker-compose up -d```.
+- run migration by ```rails:migrate``` or rake ```db:migrate```
+- The scraper is defined in scraper class, which is executed as application seed. To start, run `rails db:seed`
 
-* How to run the test suite
+## running tests
+This application uses `Rspec` for testing and `simplecov` for coverage
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Current code coverage is ` 91.18%`

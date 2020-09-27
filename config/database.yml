@@ -11,3 +11,12 @@ development:
   port: 5432
   password: docker
   encoding: unicode 
+
+test:
+  <<: *default
+  database: ny_museums_test
+  username: postgres
+  host: 10.0.0.18
+  port: 5432
+  password: docker
+  encoding: unicode 

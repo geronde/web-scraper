@@ -12,6 +12,18 @@ services:
     networks:
       local_net:
         ipv4_address: 10.0.0.17
+  
+  local_scraper_test:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ny_museums_test
+      POSTGRES_PASSWORD: docker
+    ports:
+      - "5433:54327"
+    networks:
+      local_net:
+        ipv4_address: 10.0.0.18
 networks:
   local_net:
     driver: bridge

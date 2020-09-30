@@ -1,0 +1,17 @@
+language: ruby
+cache:
+  - bundler
+  - yarn
+services:
+  - docker
+before_install:
+- docker network create --subnet=10.0.0.18/16 ci_env
+- docker run --net ci_env --ip 10.0.0.18 --name postgres_docker -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=ny_museums_test -p 5432:5432 -d postgres:13-alpine
+- nvm install --lts
+before_script:
+  - bundle install --jobs=3 --retry=3
+  - yarn
+  - bundle exec rake db:create
+  - bundle exec rake db:schema:load
+script:
+  - bundle exec rspec

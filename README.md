@@ -1,3 +1,5 @@
+![coverage](https://img.shields.io/codecov/c/github/geronde/web-scraper?flag=coverage&token=5d1a0a1d-5760-4c9b-840d-7be880b7e9a1)
+
 # Scraper
 
 This repo is a web scraper made in ruby on rails and Nikogiri

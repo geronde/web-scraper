@@ -17,3 +17,5 @@ script:
   - bundle exec rspec
 env:
   - CODECOV_TOKEN=5d1a0a1d-5760-4c9b-840d-7be880b7e9a1
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

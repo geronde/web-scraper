@@ -1,6 +1,5 @@
-![build](https://img.shields.io/travis/geronde/web-scraper/master)
-![coverage](https://img.shields.io/codecov/c/github/geronde/web-scraper?flag=coverage&token=5d1a0a1d-5760-4c9b-840d-7be880b7e9a1)
-
+[![Build Status](https://travis-ci.com/geronde/web-scraper.svg?token=bJuEyghgD6p1pyHy1sue&branch=master)](https://travis-ci.com/geronde/web-scraper)
+[![codecov](https://codecov.io/gh/geronde/web-scraper/branch/master/graph/badge.svg)](https://codecov.io/gh/geronde/web-scraper)
 
 # Scraper
 

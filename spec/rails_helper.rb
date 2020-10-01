@@ -2,6 +2,9 @@
 if ENV['RAILS_ENV'] == 'test'
   require 'simplecov'
   SimpleCov.start 'rails'
+
+  require 'codecov'
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
 end
 
 require 'spec_helper'
@@ -13,8 +16,6 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 require 'database_cleaner'
 require 'capybara/rspec'
-
-
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
